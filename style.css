@@ -1,0 +1,127 @@
+:root{
+  --bg1:#e6fffa;
+  --bg2:#ccfbf1;
+  --tosca1:#0d9488;
+  --tosca2:#2dd4bf;
+  --text:#042f2e;
+  --card:#ffffffee;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:var(--text);
+  padding:28px;
+}
+
+.card{
+  max-width:900px;
+  margin:0 auto;
+  background:var(--card);
+  border-radius:14px;
+  padding:28px;
+  box-shadow:0 10px 30px rgba(5,38,37,0.12);
+  overflow:hidden;
+}
+
+/* top section */
+.top{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  border-bottom:1px solid rgba(2,46,45,0.06);
+  padding-bottom:18px;
+}
+
+.photo{
+  width:130px;
+  height:130px;
+  object-fit:cover;
+  border-radius:10px;
+  border:6px solid white;
+  box-shadow:0 6px 20px rgba(4,47,46,0.12);
+}
+
+.title h1{
+  margin:0;
+  color:var(--tosca1);
+  font-size:24px;
+  letter-spacing:0.2px;
+}
+
+.role{
+  margin:6px 0 0;
+  color:rgba(2,46,45,0.7);
+  font-weight:600;
+}
+
+.address{
+  margin:6px 0 0;
+  color:rgba(2,46,45,0.6);
+  font-size:14px;
+}
+
+/* sections */
+section{
+  padding:18px 0;
+  display:block;
+}
+
+section h2{
+  margin:0 0 10px 0;
+  color:var(--tosca2);
+  font-size:16px;
+  letter-spacing:0.6px;
+  text-transform:uppercase;
+}
+
+.skills ul{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+
+.skills li{
+  background:linear-gradient(90deg, rgba(13,148,136,0.12), rgba(45,212,191,0.08));
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:600;
+  color:var(--tosca1);
+  box-shadow:inset 0 -2px 0 rgba(2,46,45,0.02);
+}
+
+.summary p{
+  margin:0;
+  line-height:1.45;
+}
+
+/* contact */
+.contact p{
+  margin:6px 0;
+}
+
+a{
+  color:var(--tosca1);
+  text-decoration:none;
+}
+a:hover{text-decoration:underline}
+
+/* footer */
+footer{
+  margin-top:18px;
+  text-align:right;
+  color:rgba(2,46,45,0.5);
+  font-size:13px;
+}
+
+/* responsive */
+@media (max-width:620px){
+  .top{flex-direction:column;align-items:flex-start}
+  .photo{width:110px;height:110px}
+  .card{padding:18px}
+}
